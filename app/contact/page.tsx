@@ -187,7 +187,7 @@ export default function ContactPage() {
 
       {/* Enhanced Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 h-20 bg-white shadow-lg border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+        <div className="mx-auto px-6 h-full flex items-center justify-between">
           {/* Logo Section */}
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-4 group">
@@ -195,9 +195,8 @@ export default function ContactPage() {
                 <Image
                   src="/logo.png"
                   alt="Qubixa Logo"
-                  width={100}
+                  width={150}
                   height={100}
-                  className="rounded-2xl transition-transform duration-300 group-hover:scale-105 shadow-md"
                   priority
                 />
               </div>
@@ -365,7 +364,7 @@ export default function ContactPage() {
                             onBlur={() => setFocusedField(null)}
                             required
                             className="bg-slate-700/80 border-slate-600/50 text-white placeholder-transparent peer pt-6 pb-2 focus:border-emerald-500 focus:ring-emerald-500"
-                            placeholder="First Name"
+                            placeholder=""
                           />
                           <label
                             className={`absolute left-3 transition-all duration-300 pointer-events-none ${
@@ -388,7 +387,7 @@ export default function ContactPage() {
                             onBlur={() => setFocusedField(null)}
                             required
                             className="bg-slate-700/80 border-slate-600/50 text-white placeholder-transparent peer pt-6 pb-2 focus:border-emerald-500 focus:ring-emerald-500"
-                            placeholder="Last Name"
+                            placeholder=""
                           />
                           <label
                             className={`absolute left-3 transition-all duration-300 pointer-events-none ${
@@ -413,7 +412,7 @@ export default function ContactPage() {
                           onBlur={() => setFocusedField(null)}
                           required
                           className="bg-slate-700/80 border-slate-600/50 text-white placeholder-transparent peer pt-6 pb-2 focus:border-emerald-500 focus:ring-emerald-500"
-                          placeholder="Email Address"
+                          placeholder=""
                         />
                         <label
                           className={`absolute left-3 transition-all duration-300 pointer-events-none ${
@@ -437,7 +436,7 @@ export default function ContactPage() {
                           onBlur={() => setFocusedField(null)}
                           required
                           className="bg-slate-700/80 border-slate-600/50 text-white placeholder-transparent peer pt-6 pb-2 focus:border-emerald-500 focus:ring-emerald-500"
-                          placeholder="Subject"
+                          placeholder=""
                         />
                         <label
                           className={`absolute left-3 transition-all duration-300 pointer-events-none ${
@@ -461,7 +460,7 @@ export default function ContactPage() {
                           required
                           rows={6}
                           className="bg-slate-700/80 border-slate-600/50 text-white placeholder-transparent peer pt-6 pb-2 resize-none focus:border-emerald-500 focus:ring-emerald-500"
-                          placeholder="Message Content"
+                          placeholder=""
                         />
                         <label
                           className={`absolute left-3 transition-all duration-300 pointer-events-none ${

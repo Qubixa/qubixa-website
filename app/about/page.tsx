@@ -55,7 +55,7 @@ export default function AboutPage() {
 
       {/* Enhanced Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 h-20 bg-white shadow-lg border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+        <div className="mx-auto px-6 h-full flex items-center justify-between">
           {/* Logo Section */}
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-4 group">
@@ -63,9 +63,8 @@ export default function AboutPage() {
                 <Image
                   src="/logo.png"
                   alt="Qubixa Logo"
-                  width={100}
+                  width={150}
                   height={100}
-                  className="rounded-2xl transition-transform duration-300 group-hover:scale-105 shadow-md"
                   priority
                 />
               </div>
