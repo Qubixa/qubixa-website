@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight, Cpu, Database, Globe, Smartphone, Zap, CheckCircle } from "lucide-react"
-import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 
 const techLogos = [
@@ -47,14 +47,14 @@ const services = [
 
 const products = [
   {
-    title: "Fixed Asset Management System",
+    title: "Qubixa Asset Pro",
     description: "Comprehensive platform for tracking and managing physical assets throughout their lifecycle",
     status: "In Development",
     tech: ["Python", "Flask", "Next.js", "PostgreSQL"],
     features: ["Department-wise allocation", "Maintenance logs", "Audit reports", "QR integration"],
   },
   {
-    title: "Speech-to-Text & Translation Tool",
+    title: "Qubixa Speech Pro",
     description: "AI-powered desktop application for real-time speech recognition and multi-language translation",
     status: "Architecture Phase",
     tech: ["Python", "NLP", "Speech Recognition", "Translation APIs"],
@@ -81,77 +81,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(16,185,129,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,0.3)_1px,transparent_1px)] bg-[size:50px_50px]" />
       </div>
 
-      {/* Enhanced Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 h-20 bg-white shadow-lg border-b border-gray-100">
-        <div className="mx-auto px-6 h-full flex items-center justify-between">
-          {/* Logo Section */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center space-x-4"
-          >
-            <Link href="/" className="flex items-center space-x-4 group">
-              <div className="relative">
-                <Image
-                  src="/logo.png"
-                  alt="Qubixa Logo"
-                  width={150}
-                  height={100}
-                  priority
-                />
-              </div>
-           
-            </Link>
-          </motion.div>
-
-          {/* Navigation Links */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="hidden md:flex items-center space-x-8"
-          >
-            {["Home", "About", "Solutions", "Contact"].map((item, index) => (
-              <Link
-                key={item}
-                href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className={`relative px-4 py-2 text-lg font-semibold transition-all duration-300 group ${
-                  item === "Home" ? "text-emerald-600" : "text-gray-700 hover:text-emerald-600"
-                }`}
-              >
-                <span className="relative z-10">{item}</span>
-                <span
-                  className={`absolute inset-0 rounded-lg transition-all duration-300 ${
-                    item === "Home"
-                      ? "bg-emerald-50 border border-emerald-200"
-                      : "bg-transparent group-hover:bg-emerald-50 group-hover:border group-hover:border-emerald-200"
-                  }`}
-                />
-                <span
-                  className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-0.5 transition-all duration-300 ${
-                    item === "Home" ? "w-8 bg-emerald-600" : "w-0 bg-emerald-600 group-hover:w-8"
-                  }`}
-                />
-              </Link>
-            ))}
-          </motion.div>
-
-          {/* Mobile Menu Button */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="md:hidden"
-          >
-            <button className="p-2 rounded-lg text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 transition-all duration-300">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </motion.div>
-        </div>
-      </nav>
+      {/* Navigation */}
+      <Navigation currentPage="Home" />
 
       {/* Add top padding to account for fixed navbar */}
       <div className="pt-20">

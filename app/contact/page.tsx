@@ -4,13 +4,13 @@ import type React from "react"
 
 import { motion } from "framer-motion"
 import { Mail, MapPin, Phone, Send, CheckCircle, Loader2, AlertCircle, Shield } from "lucide-react"
-import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect, useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 
 // Declare global ReCAPTCHA
@@ -185,67 +185,8 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(16,185,129,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
       </div>
 
-      {/* Enhanced Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 h-20 bg-white shadow-lg border-b border-gray-100">
-        <div className="mx-auto px-6 h-full flex items-center justify-between">
-          {/* Logo Section */}
-          <div className="flex items-center space-x-4">
-            <Link href="/" className="flex items-center space-x-4 group">
-              <div className="relative">
-                <Image
-                  src="/logo.png"
-                  alt="Qubixa Logo"
-                  width={150}
-                  height={100}
-                  priority
-                />
-              </div>
-              <div className="hidden md:block">
-                <h1 className="text-2xl font-bold text-gray-800 group-hover:text-emerald-600 transition-colors duration-300">
-                  Qubixa
-                </h1>
-                <p className="text-sm text-gray-600 font-medium">The Box of Solutions</p>
-              </div>
-            </Link>
-          </div>
-
-          {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
-            {["Home", "About", "Solutions", "Contact"].map((item) => (
-              <Link
-                key={item}
-                href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className={`relative px-4 py-2 text-lg font-semibold transition-all duration-300 group ${
-                  item === "Contact" ? "text-emerald-600" : "text-gray-700 hover:text-emerald-600"
-                }`}
-              >
-                <span className="relative z-10">{item}</span>
-                <span
-                  className={`absolute inset-0 rounded-lg transition-all duration-300 ${
-                    item === "Contact"
-                      ? "bg-emerald-50 border border-emerald-200"
-                      : "bg-transparent group-hover:bg-emerald-50 group-hover:border group-hover:border-emerald-200"
-                  }`}
-                />
-                <span
-                  className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-0.5 transition-all duration-300 ${
-                    item === "Contact" ? "w-8 bg-emerald-600" : "w-0 bg-emerald-600 group-hover:w-8"
-                  }`}
-                />
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button className="p-2 rounded-lg text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 transition-all duration-300">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </nav>
+      {/* Navigation */}
+      <Navigation currentPage="Contact" />
 
       {/* Add top padding to account for fixed navbar */}
       <div className="pt-20">
