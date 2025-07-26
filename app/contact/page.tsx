@@ -90,13 +90,13 @@ const handleSubmit = async (e: React.FormEvent) => {
     {
       icon: Mail,
       title: "Email",
-      details: "info@qubixa.com",
+      details: "qubixatech@gmail.com",
       description: "Send us an email anytime",
     },
     {
       icon: Phone,
       title: "Phone",
-      details: "+91 98765 43210",
+      details: "+91 7620981412",
       description: "Mon-Fri from 9am to 6pm",
     },
     {
@@ -284,7 +284,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   {
                     icon: Mail,
                     title: "Email Us",
-                    detail: "info@qubixa.com",
+                    detail: "qubixatech@gmail.com",
                     description: "Typically reply within 1 business day",
                     color: "bg-blue-100 text-blue-600"
                   },
