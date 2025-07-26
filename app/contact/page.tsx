@@ -205,7 +205,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 7620981412"
                     />
                   </div>
 
@@ -291,7 +291,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   {
                     icon: Phone,
                     title: "Call Us",
-                    detail: "+91 98765 43210",
+                    detail: "+91 7620981412",
                     description: "Mon-Fri, 9am-6pm IST",
                     color: "bg-green-100 text-green-600"
                   },
